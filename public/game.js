@@ -31,3 +31,8 @@ document.addEventListener("keypress", (evento) => {
     socket.emit("player:arriba", username.value)
   }
 })
+
+socket.on("player:arriba", (jugador) => {
+  
+})
+

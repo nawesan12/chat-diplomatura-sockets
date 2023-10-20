@@ -39,7 +39,6 @@ io.on("connection", (socket) => {
     io.sockets.emit("player:arriba", jugador)
   })
 
-
   socket.on("disconnect", (nombre) => {
     jugadores = jugadores.filter((jugador) => jugador.nombre !== nombre)
     io.sockets.emit("player:refresh", jugadores)
