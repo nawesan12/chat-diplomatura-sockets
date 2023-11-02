@@ -21,14 +21,6 @@ io.on("connection", (socket) => {
   console.log(`Nuevo usuario conectado al socket: ${socket.id}`)
   io.sockets.emit("player:refresh", jugadores)
 
-  // socket.on("chat:mensaje", (mensaje) => {
-  //   io.sockets.emit("chat:mensaje", mensaje)
-  // })
-
-  // socket.on("chat:escribiendo", (datos) => {
-  //   console.log("Evento recibido")
-  //   socket.broadcast.emit("chat:escribiendo", datos)
-  // })
   socket.on("player:crear", (jugador) => {
     jugadores.push(jugador)
     console.log(jugadores)
